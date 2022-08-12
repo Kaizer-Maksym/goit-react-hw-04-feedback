@@ -31,7 +31,7 @@ export const App = () => {
   const countTotal = (a, b, c) => a + b + c;
 
   const total = countTotal(good, neutral, bad);
-  const positivePercentage = Math.round(100 * (good / total)) + '%';
+  const positivePercentage = Math.round(100 * (good / total));
 
   return (
     <>

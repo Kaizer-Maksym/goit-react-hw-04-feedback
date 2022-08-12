@@ -38,7 +38,20 @@ export const Statistic = ({ options, total, positivePercentage }) => {
         Total: <StatValue> {total}</StatValue>
       </StatElem>
       <StatElem>
-        Positiv feedback: <StatValue>{positivePercentage}</StatValue>
+        {positivePercentage >= 50 ? (
+          <BsFillEmojiSmileFill
+            className="stat-icon"
+            size="25px"
+            color="rgba(0, 200, 27, 0.8)"
+          />
+        ) : (
+          <BsFillEmojiFrownFill
+            className="stat-icon"
+            size="25px"
+            color="rgba(200, 0, 0, 0.8)"
+          />
+        )}
+        Positiv feedback: <StatValue>{positivePercentage}%</StatValue>
       </StatElem>
     </>
   );
